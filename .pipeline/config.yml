@@ -35,6 +35,7 @@ stages:
 
   Release:
     cloudFoundryDeploy: true
+    tmsUpload: true
 
 steps:
   npmExecuteLint:
@@ -58,7 +59,7 @@ steps:
       susaas-sb-credentials: susaas-sb-credentials
     
 
-# tmsUpload:  # only relevant once you finish the SAP Cloud Transport Management Expert Feature chapter
-#   nodeName: 'QA'
-#   credentialsId: 'tms'
-#   customDescription: 'TMS Upload'
+tmsUpload:  # only relevant once you finish the SAP Cloud Transport Management Expert Feature chapter
+  nodeName: 'TEST'
+  credentialsId: 'tms'
+  customDescription: 'TMS Upload'
